@@ -1,0 +1,299 @@
+{
+  "datasets": [
+    {
+      "name": "ds_exec_kpi",
+      "displayName": "Executive KPI Summary",
+      "queryLines": [
+        "SELECT * FROM saleslake_dev.gold_dev.vw_exec_kpi_summary"
+      ]
+    },
+    {
+      "name": "ds_sales_monthly",
+      "displayName": "Sales Monthly Trend",
+      "queryLines": [
+        "SELECT year_month, net_revenue, profit, margin_pct, orders ",
+        "FROM saleslake_dev.gold_dev.vw_sales_monthly ",
+        "ORDER BY year_month"
+      ]
+    },
+    {
+      "name": "ds_top10_products",
+      "displayName": "Top 10 Products",
+      "queryLines": [
+        "SELECT product_name, category, net_revenue, profit, units_sold ",
+        "FROM saleslake_dev.gold_dev.vw_top10_products ",
+        "ORDER BY net_revenue DESC"
+      ]
+    },
+    {
+      "name": "ds_category_perf",
+      "displayName": "Category Performance",
+      "queryLines": [
+        "SELECT category, net_revenue, profit, margin_pct, units_sold ",
+        "FROM saleslake_dev.gold_dev.vw_category_performance ",
+        "ORDER BY net_revenue DESC"
+      ]
+    },
+    {
+      "name": "ds_regional",
+      "displayName": "Regional Performance",
+      "queryLines": [
+        "SELECT region_name, country, net_revenue, profit, margin_pct, ",
+        "       orders, unique_customers, active_stores ",
+        "FROM saleslake_dev.gold_dev.vw_regional_performance ",
+        "ORDER BY net_revenue DESC"
+      ]
+    },
+    {
+      "name": "ds_store_perf",
+      "displayName": "Store Performance",
+      "queryLines": [
+        "SELECT store_name, store_type, city, state, ",
+        "       net_revenue, profit, orders, revenue_per_sqft ",
+        "FROM saleslake_dev.gold_dev.vw_store_performance ",
+        "ORDER BY net_revenue DESC LIMIT 25"
+      ]
+    },
+    {
+      "name": "ds_segment",
+      "displayName": "Customer Segment Performance",
+      "queryLines": [
+        "SELECT segment, customers, orders, net_revenue, profit, revenue_per_customer ",
+        "FROM saleslake_dev.gold_dev.vw_customer_segment_perf ",
+        "ORDER BY net_revenue DESC"
+      ]
+    },
+    {
+      "name": "ds_discount",
+      "displayName": "Discount Effectiveness",
+      "queryLines": [
+        "SELECT discount_code, discount_type, orders_with_discount, ",
+        "       net_revenue, profit, margin_pct, discount_pct_of_gross ",
+        "FROM saleslake_dev.gold_dev.vw_discount_effectiveness ",
+        "ORDER BY net_revenue DESC"
+      ]
+    },
+    {
+      "name": "ds_channel",
+      "displayName": "Channel Performance",
+      "queryLines": [
+        "SELECT channel, orders, units, net_revenue, profit, margin_pct ",
+        "FROM saleslake_dev.gold_dev.vw_channel_perf ",
+        "ORDER BY net_revenue DESC"
+      ]
+    },
+    {
+      "name": "ds_payment",
+      "displayName": "Payment Method Mix",
+      "queryLines": [
+        "SELECT payment_method, orders, net_revenue, avg_order_value ",
+        "FROM saleslake_dev.gold_dev.vw_payment_method_perf ",
+        "ORDER BY net_revenue DESC"
+      ]
+    },
+    {
+      "name": "ds_invoice_status",
+      "displayName": "Invoice Status Summary",
+      "queryLines": [
+        "SELECT payment_status, invoice_count, total_billed, avg_days_to_pay ",
+        "FROM saleslake_dev.gold_dev.vw_invoice_status_summary"
+      ]
+    },
+    {
+      "name": "ds_yoy",
+      "displayName": "YoY Growth",
+      "queryLines": [
+        "SELECT year, month_name, net_revenue_current, net_revenue_prior_year, yoy_growth_pct ",
+        "FROM saleslake_dev.gold_dev.vw_sales_yoy ",
+        "WHERE yoy_growth_pct IS NOT NULL ",
+        "ORDER BY year DESC, month DESC"
+      ]
+    }
+  ],
+  "pages": [
+    {
+      "name": "page_executive",
+      "displayName": "Executive Summary",
+      "layout": [
+        {
+          "widget": {
+            "name": "w_title",
+            "textbox_spec": "# IntelliBI Sales — Executive Dashboard\nKPIs sourced from `saleslake_<env>.gold_<env>` star schema."
+          },
+          "position": {"x": 0, "y": 0, "width": 6, "height": 2}
+        },
+        {
+          "widget": {
+            "name": "w_kpi_revenue",
+            "queries": [{"name": "main_query", "query": {"datasetName": "ds_exec_kpi", "fields": [{"name": "net_revenue", "expression": "`net_revenue`"}], "disaggregated": true}}],
+            "spec": {"version": 2, "widgetType": "counter", "encodings": {"value": {"fieldName": "net_revenue", "displayName": "Net Revenue", "format": {"type": "number-currency", "currencyCode": "INR"}}}, "frame": {"title": "Net Revenue", "showTitle": true}}
+          },
+          "position": {"x": 0, "y": 2, "width": 2, "height": 3}
+        },
+        {
+          "widget": {
+            "name": "w_kpi_profit",
+            "queries": [{"name": "main_query", "query": {"datasetName": "ds_exec_kpi", "fields": [{"name": "total_profit", "expression": "`total_profit`"}], "disaggregated": true}}],
+            "spec": {"version": 2, "widgetType": "counter", "encodings": {"value": {"fieldName": "total_profit", "displayName": "Total Profit", "format": {"type": "number-currency", "currencyCode": "INR"}}}, "frame": {"title": "Total Profit", "showTitle": true}}
+          },
+          "position": {"x": 2, "y": 2, "width": 2, "height": 3}
+        },
+        {
+          "widget": {
+            "name": "w_kpi_margin",
+            "queries": [{"name": "main_query", "query": {"datasetName": "ds_exec_kpi", "fields": [{"name": "overall_margin_pct", "expression": "`overall_margin_pct`"}], "disaggregated": true}}],
+            "spec": {"version": 2, "widgetType": "counter", "encodings": {"value": {"fieldName": "overall_margin_pct", "displayName": "Margin %", "format": {"type": "number-plain", "decimalPlaces": {"type": "exact", "places": 2}}}}, "frame": {"title": "Margin %", "showTitle": true}}
+          },
+          "position": {"x": 4, "y": 2, "width": 2, "height": 3}
+        },
+        {
+          "widget": {
+            "name": "w_kpi_orders",
+            "queries": [{"name": "main_query", "query": {"datasetName": "ds_exec_kpi", "fields": [{"name": "total_orders", "expression": "`total_orders`"}], "disaggregated": true}}],
+            "spec": {"version": 2, "widgetType": "counter", "encodings": {"value": {"fieldName": "total_orders", "displayName": "Total Orders"}}, "frame": {"title": "Total Orders", "showTitle": true}}
+          },
+          "position": {"x": 0, "y": 5, "width": 2, "height": 3}
+        },
+        {
+          "widget": {
+            "name": "w_kpi_aov",
+            "queries": [{"name": "main_query", "query": {"datasetName": "ds_exec_kpi", "fields": [{"name": "avg_order_value", "expression": "`avg_order_value`"}], "disaggregated": true}}],
+            "spec": {"version": 2, "widgetType": "counter", "encodings": {"value": {"fieldName": "avg_order_value", "displayName": "Avg Order Value", "format": {"type": "number-currency", "currencyCode": "INR"}}}, "frame": {"title": "Avg Order Value", "showTitle": true}}
+          },
+          "position": {"x": 2, "y": 5, "width": 2, "height": 3}
+        },
+        {
+          "widget": {
+            "name": "w_kpi_customers",
+            "queries": [{"name": "main_query", "query": {"datasetName": "ds_exec_kpi", "fields": [{"name": "unique_customers", "expression": "`unique_customers`"}], "disaggregated": true}}],
+            "spec": {"version": 2, "widgetType": "counter", "encodings": {"value": {"fieldName": "unique_customers", "displayName": "Unique Customers"}}, "frame": {"title": "Unique Customers", "showTitle": true}}
+          },
+          "position": {"x": 4, "y": 5, "width": 2, "height": 3}
+        },
+        {
+          "widget": {
+            "name": "w_monthly_trend",
+            "queries": [{"name": "main_query", "query": {"datasetName": "ds_sales_monthly", "fields": [{"name": "year_month", "expression": "`year_month`"}, {"name": "net_revenue", "expression": "`net_revenue`"}, {"name": "profit", "expression": "`profit`"}], "disaggregated": true}}],
+            "spec": {"version": 3, "widgetType": "line", "encodings": {"x": {"fieldName": "year_month", "scale": {"type": "categorical"}, "displayName": "Month"}, "y": {"fields": [{"fieldName": "net_revenue", "displayName": "Net Revenue"}, {"fieldName": "profit", "displayName": "Profit"}], "scale": {"type": "quantitative"}}}, "frame": {"title": "Monthly Revenue & Profit Trend", "showTitle": true}}
+          },
+          "position": {"x": 0, "y": 8, "width": 6, "height": 6}
+        }
+      ]
+    },
+    {
+      "name": "page_products",
+      "displayName": "Product & Category",
+      "layout": [
+        {
+          "widget": {
+            "name": "w_top10_products",
+            "queries": [{"name": "main_query", "query": {"datasetName": "ds_top10_products", "fields": [{"name": "product_name", "expression": "`product_name`"}, {"name": "net_revenue", "expression": "`net_revenue`"}], "disaggregated": true}}],
+            "spec": {"version": 3, "widgetType": "bar", "encodings": {"x": {"fieldName": "net_revenue", "scale": {"type": "quantitative"}, "displayName": "Net Revenue"}, "y": {"fieldName": "product_name", "scale": {"type": "categorical"}, "displayName": "Product"}}, "frame": {"title": "Top 10 Products by Revenue", "showTitle": true}}
+          },
+          "position": {"x": 0, "y": 0, "width": 3, "height": 6}
+        },
+        {
+          "widget": {
+            "name": "w_category",
+            "queries": [{"name": "main_query", "query": {"datasetName": "ds_category_perf", "fields": [{"name": "category", "expression": "`category`"}, {"name": "net_revenue", "expression": "`net_revenue`"}, {"name": "profit", "expression": "`profit`"}], "disaggregated": true}}],
+            "spec": {"version": 3, "widgetType": "bar", "encodings": {"x": {"fieldName": "category", "scale": {"type": "categorical"}, "displayName": "Category"}, "y": {"fields": [{"fieldName": "net_revenue", "displayName": "Revenue"}, {"fieldName": "profit", "displayName": "Profit"}], "scale": {"type": "quantitative"}}}, "frame": {"title": "Revenue & Profit by Category", "showTitle": true}}
+          },
+          "position": {"x": 3, "y": 0, "width": 3, "height": 6}
+        }
+      ]
+    },
+    {
+      "name": "page_regional",
+      "displayName": "Regional & Store",
+      "layout": [
+        {
+          "widget": {
+            "name": "w_region",
+            "queries": [{"name": "main_query", "query": {"datasetName": "ds_regional", "fields": [{"name": "region_name", "expression": "`region_name`"}, {"name": "net_revenue", "expression": "`net_revenue`"}, {"name": "profit", "expression": "`profit`"}], "disaggregated": true}}],
+            "spec": {"version": 3, "widgetType": "bar", "encodings": {"x": {"fieldName": "region_name", "scale": {"type": "categorical"}, "displayName": "Region"}, "y": {"fields": [{"fieldName": "net_revenue", "displayName": "Revenue"}, {"fieldName": "profit", "displayName": "Profit"}], "scale": {"type": "quantitative"}}}, "frame": {"title": "Regional Revenue & Profit", "showTitle": true}}
+          },
+          "position": {"x": 0, "y": 0, "width": 6, "height": 5}
+        },
+        {
+          "widget": {
+            "name": "w_stores",
+            "queries": [{"name": "main_query", "query": {"datasetName": "ds_store_perf", "fields": [{"name": "store_name", "expression": "`store_name`"}, {"name": "store_type", "expression": "`store_type`"}, {"name": "city", "expression": "`city`"}, {"name": "state", "expression": "`state`"}, {"name": "net_revenue", "expression": "`net_revenue`"}, {"name": "profit", "expression": "`profit`"}, {"name": "orders", "expression": "`orders`"}, {"name": "revenue_per_sqft", "expression": "`revenue_per_sqft`"}], "disaggregated": true}}],
+            "spec": {"version": 1, "widgetType": "table", "encodings": {"columns": [{"fieldName": "store_name", "displayName": "Store"}, {"fieldName": "store_type", "displayName": "Type"}, {"fieldName": "city", "displayName": "City"}, {"fieldName": "state", "displayName": "State"}, {"fieldName": "net_revenue", "displayName": "Net Revenue", "format": {"type": "number-currency", "currencyCode": "INR"}}, {"fieldName": "profit", "displayName": "Profit", "format": {"type": "number-currency", "currencyCode": "INR"}}, {"fieldName": "orders", "displayName": "Orders"}, {"fieldName": "revenue_per_sqft", "displayName": "Rev / sqft"}]}, "frame": {"title": "Top 25 Stores", "showTitle": true}}
+          },
+          "position": {"x": 0, "y": 5, "width": 6, "height": 7}
+        }
+      ]
+    },
+    {
+      "name": "page_customers",
+      "displayName": "Customer Insights",
+      "layout": [
+        {
+          "widget": {
+            "name": "w_segment_revenue",
+            "queries": [{"name": "main_query", "query": {"datasetName": "ds_segment", "fields": [{"name": "segment", "expression": "`segment`"}, {"name": "net_revenue", "expression": "`net_revenue`"}], "disaggregated": true}}],
+            "spec": {"version": 3, "widgetType": "pie", "encodings": {"angle": {"fieldName": "net_revenue", "scale": {"type": "quantitative"}, "displayName": "Revenue"}, "color": {"fieldName": "segment", "scale": {"type": "categorical"}, "displayName": "Segment"}}, "frame": {"title": "Revenue Share by Customer Segment", "showTitle": true}}
+          },
+          "position": {"x": 0, "y": 0, "width": 3, "height": 6}
+        },
+        {
+          "widget": {
+            "name": "w_segment_table",
+            "queries": [{"name": "main_query", "query": {"datasetName": "ds_segment", "fields": [{"name": "segment", "expression": "`segment`"}, {"name": "customers", "expression": "`customers`"}, {"name": "orders", "expression": "`orders`"}, {"name": "net_revenue", "expression": "`net_revenue`"}, {"name": "profit", "expression": "`profit`"}, {"name": "revenue_per_customer", "expression": "`revenue_per_customer`"}], "disaggregated": true}}],
+            "spec": {"version": 1, "widgetType": "table", "encodings": {"columns": [{"fieldName": "segment", "displayName": "Segment"}, {"fieldName": "customers", "displayName": "Customers"}, {"fieldName": "orders", "displayName": "Orders"}, {"fieldName": "net_revenue", "displayName": "Revenue", "format": {"type": "number-currency", "currencyCode": "INR"}}, {"fieldName": "profit", "displayName": "Profit", "format": {"type": "number-currency", "currencyCode": "INR"}}, {"fieldName": "revenue_per_customer", "displayName": "Rev/Customer", "format": {"type": "number-currency", "currencyCode": "INR"}}]}, "frame": {"title": "Customer Segment KPIs", "showTitle": true}}
+          },
+          "position": {"x": 3, "y": 0, "width": 3, "height": 6}
+        }
+      ]
+    },
+    {
+      "name": "page_discount",
+      "displayName": "Discount & Channel",
+      "layout": [
+        {
+          "widget": {
+            "name": "w_discount",
+            "queries": [{"name": "main_query", "query": {"datasetName": "ds_discount", "fields": [{"name": "discount_code", "expression": "`discount_code`"}, {"name": "discount_type", "expression": "`discount_type`"}, {"name": "orders_with_discount", "expression": "`orders_with_discount`"}, {"name": "net_revenue", "expression": "`net_revenue`"}, {"name": "margin_pct", "expression": "`margin_pct`"}, {"name": "discount_pct_of_gross", "expression": "`discount_pct_of_gross`"}], "disaggregated": true}}],
+            "spec": {"version": 1, "widgetType": "table", "encodings": {"columns": [{"fieldName": "discount_code", "displayName": "Code"}, {"fieldName": "discount_type", "displayName": "Type"}, {"fieldName": "orders_with_discount", "displayName": "Orders"}, {"fieldName": "net_revenue", "displayName": "Revenue", "format": {"type": "number-currency", "currencyCode": "INR"}}, {"fieldName": "margin_pct", "displayName": "Margin %"}, {"fieldName": "discount_pct_of_gross", "displayName": "Disc % of Gross"}]}, "frame": {"title": "Discount Effectiveness", "showTitle": true}}
+          },
+          "position": {"x": 0, "y": 0, "width": 4, "height": 6}
+        },
+        {
+          "widget": {
+            "name": "w_channel",
+            "queries": [{"name": "main_query", "query": {"datasetName": "ds_channel", "fields": [{"name": "channel", "expression": "`channel`"}, {"name": "net_revenue", "expression": "`net_revenue`"}], "disaggregated": true}}],
+            "spec": {"version": 3, "widgetType": "pie", "encodings": {"angle": {"fieldName": "net_revenue", "scale": {"type": "quantitative"}, "displayName": "Revenue"}, "color": {"fieldName": "channel", "scale": {"type": "categorical"}, "displayName": "Channel"}}, "frame": {"title": "Revenue by Channel", "showTitle": true}}
+          },
+          "position": {"x": 4, "y": 0, "width": 2, "height": 6}
+        },
+        {
+          "widget": {
+            "name": "w_payment",
+            "queries": [{"name": "main_query", "query": {"datasetName": "ds_payment", "fields": [{"name": "payment_method", "expression": "`payment_method`"}, {"name": "orders", "expression": "`orders`"}, {"name": "net_revenue", "expression": "`net_revenue`"}], "disaggregated": true}}],
+            "spec": {"version": 3, "widgetType": "bar", "encodings": {"x": {"fieldName": "payment_method", "scale": {"type": "categorical"}, "displayName": "Payment Method"}, "y": {"fields": [{"fieldName": "net_revenue", "displayName": "Revenue"}], "scale": {"type": "quantitative"}}}, "frame": {"title": "Payment Method Mix", "showTitle": true}}
+          },
+          "position": {"x": 0, "y": 6, "width": 6, "height": 5}
+        }
+      ]
+    },
+    {
+      "name": "page_invoice",
+      "displayName": "Invoice / AR",
+      "layout": [
+        {
+          "widget": {
+            "name": "w_inv_status",
+            "queries": [{"name": "main_query", "query": {"datasetName": "ds_invoice_status", "fields": [{"name": "payment_status", "expression": "`payment_status`"}, {"name": "invoice_count", "expression": "`invoice_count`"}, {"name": "total_billed", "expression": "`total_billed`"}, {"name": "avg_days_to_pay", "expression": "`avg_days_to_pay`"}], "disaggregated": true}}],
+            "spec": {"version": 1, "widgetType": "table", "encodings": {"columns": [{"fieldName": "payment_status", "displayName": "Status"}, {"fieldName": "invoice_count", "displayName": "Invoices"}, {"fieldName": "total_billed", "displayName": "Total Billed", "format": {"type": "number-currency", "currencyCode": "INR"}}, {"fieldName": "avg_days_to_pay", "displayName": "Avg Days to Pay"}]}, "frame": {"title": "Invoice Status Summary", "showTitle": true}}
+          },
+          "position": {"x": 0, "y": 0, "width": 6, "height": 5}
+        }
+      ]
+    }
+  ],
+  "uiSettings": {
+    "theme": {
+      "widgetHeaderAlignment": "ALIGNMENT_UNSPECIFIED"
+    }
+  }
+}

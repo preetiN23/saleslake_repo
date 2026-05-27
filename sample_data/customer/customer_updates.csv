@@ -1,0 +1,101 @@
+customer_id,customer_name,email,phone,address,city,state,country,zip_code,segment
+2416,Sita Patel,sita.patel2416@example.in,+91-9790-956835,"282, MG Road (New)",BENGALURU,KARNATAKA,INDIA,283381,STUDENT
+1472,Yash Das,updated.yash.das1472@example.in,+91-9605-989897,"657, Nehru Marg",MUMBAI PORT,MAHARASHTRA,INDIA,502068,STUDENT
+2762,Reyansh Krishnan,reyansh.krishnan2762@example.in,+91-7945-559564,"652, Anna Salai (New)",MYSURU,KARNATAKA,INDIA,562977,ELITE
+1680,Aarohi Venkatesh,aarohi.venkatesh1680@example.in,+91-8677-496267,"753, Anna Salai (New)",KOLKATA,WEST BENGAL,INDIA,145494,PRIME
+1727,Tara Shah,updated.tara.shah1727@example.in,+91-9528-530224,"194, MG Road",CUTTACK,ODISHA,INDIA,758938,REGULAR
+1021,Manish Bose,manish.bose1021@example.in,+91-8706-189067,"933, Nehru Marg",IMPHAL,MANIPUR,INDIA,429723,PRIME
+1651,Karan Banerjee,karan.banerjee1651@example.in,+91-6229-935593,"717, Linking Road (New)",INDORE,MADHYA PRADESH,INDIA,786153,ELITE
+1193,Vihaan Chatterjee,updated.vihaan.chatterjee1193@example.in,+91-9314-862627,"84, Marine Drive",AGRA,UTTAR PRADESH,INDIA,805732,STUDENT
+1555,Riya Tiwari,riya.tiwari1555@example.in,+91-9884-495552,"139, Linking Road (New)",NOIDA,UTTAR PRADESH,INDIA,560592,ELITE
+1430,Lakshmi Sharma,lakshmi.sharma1430@example.in,+91-7749-571155,"655, FC Road",AHMEDABAD,GUJARAT,INDIA,212179,PRIME
+2475,Ananya Sen,updated.ananya.sen2475@example.in,+91-6250-662698,"468, Anna Salai",THIRUVANANTHAPURAM,KERALA,INDIA,647387,PRIME
+2581,Priya Sharma,updated.priya.sharma2581@example.in,+91-6475-525577,"571, Brigade Road",NASHIK,MAHARASHTRA,INDIA,547973,ELITE
+1286,Radha Sharma,radha.sharma1286@example.in,+91-6704-661620,"408, Marine Drive (New)",VIJAYAWADA,ANDHRA PRADESH,INDIA,554280,PRIME
+1206,Vikram Rao,vikram.rao1206@example.in,+91-7628-715517,"805, Anna Salai",VADODARA,GUJARAT,INDIA,601507,PRIME
+2192,Sai Venkatesh,sai.venkatesh2192@example.in,+91-7155-340897,"313, Park Street (New)",AMRITSAR,PUNJAB,INDIA,228661,STUDENT
+2311,Reyansh Kapoor,updated.reyansh.kapoor2311@example.in,+91-7366-183473,"701, Brigade Road",SILIGURI,WEST BENGAL,INDIA,305666,STUDENT
+1216,Aryan Mehta,aryan.mehta1216@example.in,+91-9589-879241,"755, Brigade Road (New)",AGRA,UTTAR PRADESH,INDIA,326509,REGULAR
+1614,Sara Banerjee,sara.banerjee1614@example.in,+91-9746-712262,"241, Brigade Road",GUWAHATI,ASSAM,INDIA,617755,ELITE
+1487,Devansh Rao,devansh.rao1487@example.in,+91-9614-551777,"521, Brigade Road",KANPUR,UTTAR PRADESH,INDIA,165739,PRIME
+2365,Lakshmi Iyer,lakshmi.iyer2365@example.in,+91-7261-223815,"888, Marine Drive",AMRITSAR,PUNJAB,INDIA,540033,PRIME
+2724,Shreya Iyer,shreya.iyer2724@example.in,+91-6297-291912,"9, Nehru Marg (New)",CHENNAI,TAMIL NADU,INDIA,833703,REGULAR
+1102,Ishaan Nair,updated.ishaan.nair1102@example.in,+91-7720-616094,"104, Linking Road",HYDERABAD,TELANGANA,INDIA,627708,PRIME
+2060,Kavya Khanna,kavya.khanna2060@example.in,+91-9120-614806,"447, Marine Drive",RANCHI,JHARKHAND,INDIA,554740,ELITE
+2744,Siddharth Chopra,updated.siddharth.chopra2744@example.in,+91-9646-503148,"783, Gandhi Road",MUMBAI PORT,MAHARASHTRA,INDIA,751346,PRIME
+1905,Rahul Menon,updated.rahul.menon1905@example.in,+91-7994-864733,"676, FC Road",INDORE,MADHYA PRADESH,INDIA,491068,ELITE
+1994,Lakshmi Krishnan,updated.lakshmi.krishnan1994@example.in,+91-7428-870907,"655, Brigade Road",PANAJI,GOA,INDIA,536772,REGULAR
+2879,Tara Naidu,tara.naidu2879@example.in,+91-9221-201482,"173, Sector 17 (New)",THIRUVANANTHAPURAM,KERALA,INDIA,577318,REGULAR
+2211,Karan Joshi,karan.joshi2211@example.in,+91-6374-940951,"177, Anna Salai (New)",LUCKNOW,UTTAR PRADESH,INDIA,520702,PRIME
+1945,Raj Menon,raj.menon1945@example.in,+91-9501-266006,"194, FC Road (New)",NEW DELHI,DELHI,INDIA,401157,REGULAR
+2307,Kavya Gupta,kavya.gupta2307@example.in,+91-6271-393178,"902, Gandhi Road (New)",NEW DELHI,DELHI,INDIA,294452,PRIME
+1287,Neha Chopra,updated.neha.chopra1287@example.in,+91-7632-795984,"617, FC Road",ITANAGAR,ARUNACHAL PRADESH,INDIA,342932,REGULAR
+1535,Neha Yadav,neha.yadav1535@example.in,+91-7814-439818,"603, FC Road",MYSURU,KARNATAKA,INDIA,475004,PRIME
+1955,Sneha Pandey,sneha.pandey1955@example.in,+91-8168-571319,"399, Park Street",SURAT,GUJARAT,INDIA,399627,PRIME
+2240,Neha Verma,neha.verma2240@example.in,+91-7995-158077,"533, Park Street",GURUGRAM,HARYANA,INDIA,488873,ELITE
+2995,Ananya Patel,ananya.patel2995@example.in,+91-7558-458505,"638, Nehru Marg",INDORE,MADHYA PRADESH,INDIA,724420,ELITE
+1260,Aarohi Iyer,updated.aarohi.iyer1260@example.in,+91-7716-706435,"975, Gandhi Road",MYSURU,KARNATAKA,INDIA,122936,REGULAR
+1767,Vijay Joshi,updated.vijay.joshi1767@example.in,+91-8119-958294,"722, Park Street",SURAT,GUJARAT,INDIA,328742,PRIME
+2419,Anjali Venkatesh,anjali.venkatesh2419@example.in,+91-6463-547898,"46, Marine Drive",PUNE,MAHARASHTRA,INDIA,688654,PRIME
+2519,Suresh Chatterjee,suresh.chatterjee2519@example.in,+91-6523-976958,"751, Nehru Marg",VADODARA,GUJARAT,INDIA,764736,ELITE
+1515,Siddharth Jain,siddharth.jain1515@example.in,+91-7639-563367,"175, Marine Drive (New)",CHANDIGARH,CHANDIGARH,INDIA,638288,PRIME
+1269,Sai Mukherjee,sai.mukherjee1269@example.in,+91-9227-390206,"66, Brigade Road",JAIPUR,RAJASTHAN,INDIA,141107,PRIME
+1315,Arjun Chatterjee,arjun.chatterjee1315@example.in,+91-7831-490219,"409, MG Road (New)",SHILLONG,MEGHALAYA,INDIA,744330,REGULAR
+2989,Kabir Reddy,kabir.reddy2989@example.in,+91-7503-271139,"941, Brigade Road (New)",VISAKHAPATNAM,ANDHRA PRADESH,INDIA,248687,REGULAR
+1192,Devansh Bose,devansh.bose1192@example.in,+91-7974-661479,"302, Gandhi Road",GURUGRAM,HARYANA,INDIA,453598,ELITE
+2028,Anaya Saxena,anaya.saxena2028@example.in,+91-7352-757395,"199, Gandhi Road (New)",LUCKNOW,UTTAR PRADESH,INDIA,766013,PRIME
+2117,Ishaan Bose,ishaan.bose2117@example.in,+91-9384-312080,"739, Gandhi Road",NASHIK,MAHARASHTRA,INDIA,548168,ELITE
+1484,Arjun Chatterjee,arjun.chatterjee1484@example.in,+91-7802-422066,"663, MG Road (New)",PUNE,MAHARASHTRA,INDIA,789878,REGULAR
+2451,Siddharth Joshi,siddharth.joshi2451@example.in,+91-7888-539074,"345, Sector 17",SHILLONG,MEGHALAYA,INDIA,166824,PRIME
+2677,Kavya Chatterjee,updated.kavya.chatterjee2677@example.in,+91-6256-943807,"670, Nehru Marg",CUTTACK,ODISHA,INDIA,788044,ELITE
+1521,Radha Venkatesh,radha.venkatesh1521@example.in,+91-6818-315025,"529, Gandhi Road",ITANAGAR,ARUNACHAL PRADESH,INDIA,699351,PRIME
+2287,Sita Jain,updated.sita.jain2287@example.in,+91-7997-220570,"869, Anna Salai",KOCHI,KERALA,INDIA,295825,STUDENT
+2635,Anjali Tiwari,anjali.tiwari2635@example.in,+91-8426-363640,"583, Nehru Marg",GURUGRAM,HARYANA,INDIA,292745,PRIME
+2384,Ritu Shah,ritu.shah2384@example.in,+91-8572-555275,"3, Nehru Marg",AGRA,UTTAR PRADESH,INDIA,156266,ELITE
+1659,Karan Verma,karan.verma1659@example.in,+91-9889-802586,"355, Linking Road",RANCHI,JHARKHAND,INDIA,334164,PRIME
+2435,Kavya Pillai,kavya.pillai2435@example.in,+91-6659-667323,"980, MG Road",SHILLONG,MEGHALAYA,INDIA,530169,PRIME
+2909,Ishita Chatterjee,ishita.chatterjee2909@example.in,+91-6884-229734,"857, Marine Drive (New)",VISAKHAPATNAM,ANDHRA PRADESH,INDIA,627008,REGULAR
+2106,Ishaan Kumar,ishaan.kumar2106@example.in,+91-8261-774720,"795, Anna Salai",SURAT,GUJARAT,INDIA,210789,PRIME
+2621,Aditya Tiwari,updated.aditya.tiwari2621@example.in,+91-6150-678003,"471, MG Road",SILIGURI,WEST BENGAL,INDIA,646294,REGULAR
+1225,Aanya Reddy,aanya.reddy1225@example.in,+91-7618-146803,"474, MG Road",MYSURU,KARNATAKA,INDIA,186751,ELITE
+2210,Dhruv Borah,dhruv.borah2210@example.in,+91-9732-472325,"806, MG Road",GUWAHATI,ASSAM,INDIA,764728,PRIME
+1370,Vikram Jain,vikram.jain1370@example.in,+91-7590-198242,"989, MG Road (New)",RANCHI,JHARKHAND,INDIA,591705,REGULAR
+2508,Ritu Sharma,updated.ritu.sharma2508@example.in,+91-6851-152199,"65, Linking Road",CHENNAI PORT,TAMIL NADU,INDIA,340222,PRIME
+2900,Priya Aggarwal,priya.aggarwal2900@example.in,+91-7267-433290,"776, Nehru Marg",PANAJI,GOA,INDIA,822390,ELITE
+2985,Manish Rao,manish.rao2985@example.in,+91-6271-356564,"675, MG Road (New)",CHENNAI,TAMIL NADU,INDIA,152715,REGULAR
+1016,Aisha Bhatia,aisha.bhatia1016@example.in,+91-6682-807814,"410, Sector 17 (New)",NAGPUR,MAHARASHTRA,INDIA,828666,STUDENT
+1620,Neha Sen,neha.sen1620@example.in,+91-8521-510389,"114, Linking Road (New)",MYSURU,KARNATAKA,INDIA,555853,ELITE
+2112,Krishna Krishnan,krishna.krishnan2112@example.in,+91-8826-319961,"918, Marine Drive",KOCHI PORT,KERALA,INDIA,798056,ELITE
+1990,Aarav Subramanian,aarav.subramanian1990@example.in,+91-6888-394464,"892, Gandhi Road (New)",GURUGRAM,HARYANA,INDIA,612447,REGULAR
+2009,Sara Venkatesh,sara.venkatesh2009@example.in,+91-8801-614125,"289, Park Street (New)",GUWAHATI,ASSAM,INDIA,150550,ELITE
+1085,Suresh Venkatesh,updated.suresh.venkatesh1085@example.in,+91-6216-876487,"678, Marine Drive",JAIPUR,RAJASTHAN,INDIA,298274,REGULAR
+1884,Dhruv Aggarwal,updated.dhruv.aggarwal1884@example.in,+91-8962-298701,"837, Marine Drive",CUTTACK,ODISHA,INDIA,375735,STUDENT
+2010,Sita Patel,updated.sita.patel2010@example.in,+91-8656-196520,"85, Park Street",VADODARA,GUJARAT,INDIA,771964,REGULAR
+2299,Ananya Patel,ananya.patel2299@example.in,+91-8562-756477,"11, MG Road (New)",VISAKHAPATNAM,ANDHRA PRADESH,INDIA,590127,REGULAR
+1783,Kavya Mukherjee,updated.kavya.mukherjee1783@example.in,+91-9119-108952,"231, Brigade Road",DELHI,DELHI,INDIA,557898,REGULAR
+2699,Vijay Shah,vijay.shah2699@example.in,+91-8811-472202,"234, Marine Drive (New)",RAIPUR,CHHATTISGARH,INDIA,443803,REGULAR
+2177,Dhruv Pillai,dhruv.pillai2177@example.in,+91-6797-675215,"452, Gandhi Road",LUCKNOW,UTTAR PRADESH,INDIA,341454,PRIME
+1407,Radha Saxena,radha.saxena1407@example.in,+91-7124-715698,"434, Nehru Marg (New)",CHANDIGARH,CHANDIGARH,INDIA,610121,STUDENT
+2970,Devansh Pillai,devansh.pillai2970@example.in,+91-6561-587119,"846, Linking Road (New)",NEW DELHI,DELHI,INDIA,336531,REGULAR
+1428,Lakshmi Venkatesh,updated.lakshmi.venkatesh1428@example.in,+91-7431-796320,"844, Brigade Road",GUWAHATI,ASSAM,INDIA,124875,REGULAR
+2804,Kavya Bose,kavya.bose2804@example.in,+91-9954-664941,"82, Sector 17",GUWAHATI,ASSAM,INDIA,462908,PRIME
+1481,Kabir Pandey,updated.kabir.pandey1481@example.in,+91-8313-953536,"605, Anna Salai",CHANDIGARH,CHANDIGARH,INDIA,648891,PRIME
+2552,Arjun Sharma,arjun.sharma2552@example.in,+91-6758-542242,"860, MG Road",GURUGRAM,HARYANA,INDIA,483470,PRIME
+1349,Sneha Das,sneha.das1349@example.in,+91-7327-452508,"437, Marine Drive",MUMBAI PORT,MAHARASHTRA,INDIA,174329,ELITE
+2207,Siddharth Subramanian,siddharth.subramanian2207@example.in,+91-7522-256524,"817, Sector 17",AMRITSAR,PUNJAB,INDIA,646538,PRIME
+2208,Anil Chopra,updated.anil.chopra2208@example.in,+91-6474-425191,"842, Gandhi Road",AIZAWL,MIZORAM,INDIA,714845,ELITE
+2144,Raj Aggarwal,updated.raj.aggarwal2144@example.in,+91-8176-622491,"316, Sector 17",LUCKNOW,UTTAR PRADESH,INDIA,536635,REGULAR
+1881,Rahul Mehta,rahul.mehta1881@example.in,+91-6346-791634,"290, Nehru Marg (New)",VISAKHAPATNAM,ANDHRA PRADESH,INDIA,295658,ELITE
+1726,Karan Malhotra,karan.malhotra1726@example.in,+91-6645-970177,"307, Gandhi Road (New)",VISAKHAPATNAM,ANDHRA PRADESH,INDIA,798065,REGULAR
+1196,Rajesh Venkatesh,rajesh.venkatesh1196@example.in,+91-6312-330189,"917, Park Street",SILIGURI,WEST BENGAL,INDIA,584040,PRIME
+1734,Tara Aggarwal,tara.aggarwal1734@example.in,+91-9982-504032,"358, Sector 17 (New)",RAJKOT,GUJARAT,INDIA,382660,STUDENT
+2788,Ritu Rao,ritu.rao2788@example.in,+91-7594-951619,"120, Park Street (New)",KOLKATA,WEST BENGAL,INDIA,162431,REGULAR
+2265,Sita Naidu,sita.naidu2265@example.in,+91-6783-993604,"183, Marine Drive (New)",DELHI,DELHI,INDIA,739557,ELITE
+2931,Saanvi Bhatia,saanvi.bhatia2931@example.in,+91-8967-578038,"675, Linking Road (New)",BHOPAL,MADHYA PRADESH,INDIA,808751,ELITE
+1118,Nisha Kapoor,updated.nisha.kapoor1118@example.in,+91-7632-667059,"291, Park Street",CUTTACK,ODISHA,INDIA,207328,STUDENT
+1340,Krishna Menon,krishna.menon1340@example.in,+91-6236-513711,"489, Linking Road (New)",VISAKHAPATNAM,ANDHRA PRADESH,INDIA,143141,REGULAR
+1697,Yash Yadav,yash.yadav1697@example.in,+91-9925-186654,"355, Nehru Marg",CHANDIGARH,CHANDIGARH,INDIA,797728,ELITE
+1957,Anaya Krishnan,updated.anaya.krishnan1957@example.in,+91-8427-608242,"322, FC Road",KANPUR,UTTAR PRADESH,INDIA,672361,REGULAR
+2468,Siddharth Reddy,siddharth.reddy2468@example.in,+91-9462-848910,"13, Anna Salai",LUCKNOW,UTTAR PRADESH,INDIA,173730,ELITE
+2363,Kabir Singh,updated.kabir.singh2363@example.in,+91-7105-704555,"426, Marine Drive",GUWAHATI,ASSAM,INDIA,196662,REGULAR
+1594,Ishaan Gupta,ishaan.gupta1594@example.in,+91-6806-275044,"185, FC Road (New)",PUNE,MAHARASHTRA,INDIA,649908,STUDENT
