@@ -198,11 +198,10 @@ GROUP BY c.segment;
 CREATE OR REPLACE VIEW vw_customer_rfm AS
 WITH base AS (
     SELECT customer_id, customer_name, segment,
-           DATEDIFF(CURRENT_DATE(), MAX(sale_date))  AS recency_days,
-           COUNT(DISTINCT sale_id)                   AS frequency,
-           SUM(net_amount)                           AS monetary
+           days_since_last_purchase AS recency_days,
+           lifetime_orders AS frequency,
+           lifetime_value AS monetary
     FROM vw_customer_360
-    GROUP BY customer_id, customer_name, segment
 )
 SELECT b.*,
     NTILE(5) OVER (ORDER BY recency_days ASC)  AS r_score,
