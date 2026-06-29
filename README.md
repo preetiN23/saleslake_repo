@@ -2,7 +2,7 @@
 
 End-to-end enterprise Sales & Analytics Lakehouse on **Databricks Unity
 Catalog** using **Medallion Architecture** with a classic **Star Schema** in
-the Gold layer and a ready-to-import **Databricks SQL Dashboard**.
+the Gold layer and a ready-to-import **Databricks SQL Dashboard**
 
 > Reference: [Medallion Architecture on Databricks](https://docs.databricks.com/aws/en/lakehouse/medallion)
 
